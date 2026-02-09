@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>簡単Webページ</title>
+    <style>
+        /* --- CSS: 見た目の調整 --- */
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #message {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- HTML: 構造 --- -->
+    <div id="message">ボタンを押してね</div>
+    <button id="myButton">クリック</button>
+
+    <script>
+        // --- JavaScript: 動き ---
+        const button = document.getElementById('myButton');
+        const message = document.getElementById('message');
+
+        button.addEventListener('click', function() {
+            message.innerText = 'JavaScriptで文字が変わりました！';
+            message.style.color = 'blue'; // 色も変わる
+        });
+    </script>
+
+</body>
+</html>
